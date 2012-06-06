@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace HQT_QuanLyThietBi
 {
-    public partial class Form1 : Form
+    public partial class FormDangNhap : Form
     {
-        public Form1()
+        public FormDangNhap()
         {
             InitializeComponent();
         }
