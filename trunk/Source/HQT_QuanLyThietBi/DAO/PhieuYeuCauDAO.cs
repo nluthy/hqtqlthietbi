@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DAO
 {
-    public class PhieuYeuCauDAO
+    public class PhieuYeuCauDAO:DataAccess
     {
     }
 }

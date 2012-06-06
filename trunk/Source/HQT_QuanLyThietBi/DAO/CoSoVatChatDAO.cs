@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DAO
 {
-    public class CoSoVatChatDAO
+    public class CoSoVatChatDAO:DataAccess
     {
     }
 }
