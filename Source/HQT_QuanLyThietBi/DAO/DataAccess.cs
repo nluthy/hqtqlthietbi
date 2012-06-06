@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Data.OleDb;
+using System.Data.SqlClient;
 
 namespace DAO
 {
     public class DataAccess
     {
         private static string chuoiKetNoi = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=hqtqltb;User Id=sa;Password=;";
-        public static OleDbConnection KetNoi()
+        public static SqlConnection KetNoi()
         {
-            OleDbConnection ketNoi = new OleDbConnection(chuoiKetNoi);
+            SqlConnection ketNoi = new SqlConnection(chuoiKetNoi);
             ketNoi.Open();
             return ketNoi;
         }
