@@ -12,7 +12,7 @@ namespace HQT_QuanLyThietBi
 {
     public partial class MainForm : Form
     {
-        private NguoiSuDungDTO nguoiSuDung;
+        
 
         public MainForm()
         {
@@ -21,17 +21,9 @@ namespace HQT_QuanLyThietBi
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-
+            MessageBox.Show(Program.getNguoiSuDung(), "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        void setNguoiSuDung(NguoiSuDungDTO nsd)
-        {
-            this.nguoiSuDung = nsd;
-        }
-
-        string getNguoiSuDung()
-        {
-            return nguoiSuDung.MaNguoiSuDung;
-        }
+       
     }
 }

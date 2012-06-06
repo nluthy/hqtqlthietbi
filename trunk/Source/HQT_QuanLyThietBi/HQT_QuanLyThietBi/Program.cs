@@ -2,11 +2,25 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using DTO;
 
 namespace HQT_QuanLyThietBi
 {
     static class Program
     {
+        private static NguoiSuDungDTO nguoiSuDung;
+
+        public static void setNguoiSuDung(NguoiSuDungDTO nsd)
+        {
+            nguoiSuDung = nsd;
+        }
+
+        public static string getNguoiSuDung()
+        {
+            return nguoiSuDung.MaNguoiSuDung;
+        }
+
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -15,7 +29,12 @@ namespace HQT_QuanLyThietBi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormDangNhap());
+            FormDangNhap form = new FormDangNhap();
+
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                Application.Run(new MainForm());
+            }
         }
     }
 }
