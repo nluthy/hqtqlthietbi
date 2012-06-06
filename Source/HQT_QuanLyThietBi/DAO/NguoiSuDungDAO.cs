@@ -10,7 +10,7 @@ namespace DAO
 {
     public class NguoiSuDungDAO:DataAccess
     {
-        int DangNhap(NguoiSuDungDTO nsd)
+        public static int DangNhap(NguoiSuDungDTO nsd)
         {
             SqlConnection conn = null;
             try
@@ -22,7 +22,14 @@ namespace DAO
                 cmd.Parameters.Add("@MatKhau", System.Data.SqlDbType.NChar, 10);
                 cmd.Parameters["@MaNguoiSuDung"].Value = nsd.MaNguoiSuDung;
                 cmd.Parameters["@MatKhau"].Value = nsd.MatKhau;
-                return cmd.ExecuteNonQuery();
+
+                SqlParameter returnValue = new SqlParameter();
+                returnValue.Direction = System.Data.ParameterDirection.ReturnValue;
+                cmd.Parameters.Add(returnValue);
+                
+                cmd.ExecuteNonQuery();
+
+                return (int)returnValue.Value;
             }
             catch (Exception ex)
             {
