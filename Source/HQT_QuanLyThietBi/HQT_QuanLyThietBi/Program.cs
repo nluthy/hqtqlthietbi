@@ -33,7 +33,7 @@ namespace HQT_QuanLyThietBi
 
             if (form.ShowDialog() == DialogResult.OK)
             {
-                Application.Run(new MainForm());
+                Application.Run(new UserMainForm());
             }
         }
     }
