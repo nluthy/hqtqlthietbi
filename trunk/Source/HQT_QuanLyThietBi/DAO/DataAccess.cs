@@ -9,7 +9,7 @@ namespace DAO
 {
     public class DataAccess
     {
-        private static string chuoiKetNoi = "Data Source=localhost;Initial Catalog=hqtqltb;User Id=sa;Password=;";
+        private static string chuoiKetNoi = "Data Source=localhost;Initial Catalog=hqtqltb;Integrated Security=True; Connect Timeout=0; Trusted_Connection=Yes";
         public static SqlConnection KetNoi()
         {
             SqlConnection ketNoi = new SqlConnection(chuoiKetNoi);
