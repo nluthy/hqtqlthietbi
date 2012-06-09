@@ -39,13 +39,16 @@
             // 
             // btnDangNhap
             // 
+            this.btnDangNhap.BackColor = System.Drawing.Color.DarkOrange;
             this.btnDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnDangNhap.ForeColor = System.Drawing.Color.White;
             this.btnDangNhap.Location = new System.Drawing.Point(127, 137);
             this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(75, 23);
+            this.btnDangNhap.Size = new System.Drawing.Size(82, 23);
             this.btnDangNhap.TabIndex = 3;
             this.btnDangNhap.Text = "Đăng nhập";
-            this.btnDangNhap.UseVisualStyleBackColor = true;
+            this.btnDangNhap.UseVisualStyleBackColor = false;
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // label1
@@ -61,7 +64,7 @@
             // 
             this.txtTenDangNhap.Location = new System.Drawing.Point(127, 58);
             this.txtTenDangNhap.Name = "txtTenDangNhap";
-            this.txtTenDangNhap.Size = new System.Drawing.Size(156, 20);
+            this.txtTenDangNhap.Size = new System.Drawing.Size(170, 20);
             this.txtTenDangNhap.TabIndex = 1;
             // 
             // label2
@@ -77,19 +80,22 @@
             // 
             this.txtMatKhau.Location = new System.Drawing.Point(127, 98);
             this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.PasswordChar = '*';
-            this.txtMatKhau.Size = new System.Drawing.Size(156, 20);
+            this.txtMatKhau.PasswordChar = '♥';
+            this.txtMatKhau.Size = new System.Drawing.Size(170, 20);
             this.txtMatKhau.TabIndex = 2;
             // 
             // btnHuy
             // 
+            this.btnHuy.BackColor = System.Drawing.Color.DarkOrange;
             this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnHuy.Location = new System.Drawing.Point(208, 137);
+            this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnHuy.ForeColor = System.Drawing.Color.White;
+            this.btnHuy.Location = new System.Drawing.Point(215, 137);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(75, 23);
+            this.btnHuy.Size = new System.Drawing.Size(82, 23);
             this.btnHuy.TabIndex = 4;
             this.btnHuy.Text = "Hủy bỏ";
-            this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.UseVisualStyleBackColor = false;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // label3
@@ -107,7 +113,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.ClientSize = new System.Drawing.Size(328, 181);
+            this.ClientSize = new System.Drawing.Size(334, 181);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.txtMatKhau);
