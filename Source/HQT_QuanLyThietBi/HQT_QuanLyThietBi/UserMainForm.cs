@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using DAO;
+using DTO;
 
 namespace HQT_QuanLyThietBi
 {
@@ -14,6 +16,12 @@ namespace HQT_QuanLyThietBi
         public UserMainForm()
         {
             InitializeComponent();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            List<CoSoVatChatDTO> csvcList = CoSoVatChatDAO.LayDanhSachCoSoVatChat("", "1");
+            MessageBox.Show(csvcList[5].TenVatChat);
         }
     }
 }
