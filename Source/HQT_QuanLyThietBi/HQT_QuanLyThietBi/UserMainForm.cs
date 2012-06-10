@@ -33,10 +33,8 @@ namespace HQT_QuanLyThietBi
             form.Show();
             form.Location = Location;
             this.Visible = false;
-            form.Owner = this;
-            //this.TopLevel = false;
-            //form.Parent = this;
-            
+            form.formParent = this;
+
         }
 
         private void btnMinimize_Click(object sender, EventArgs e)
@@ -82,7 +80,7 @@ namespace HQT_QuanLyThietBi
             }
         }
 
-       
-      
+
+
     }
 }
