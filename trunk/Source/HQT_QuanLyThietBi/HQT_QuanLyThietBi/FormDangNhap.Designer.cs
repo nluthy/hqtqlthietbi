@@ -40,7 +40,7 @@
             // btnDangNhap
             // 
             this.btnDangNhap.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnDangNhap.ForeColor = System.Drawing.Color.White;
             this.btnDangNhap.Location = new System.Drawing.Point(127, 137);
@@ -54,15 +54,16 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.Location = new System.Drawing.Point(27, 61);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 13);
+            this.label1.Size = new System.Drawing.Size(99, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Tên đăng nhập";
             // 
             // txtTenDangNhap
             // 
-            this.txtTenDangNhap.Location = new System.Drawing.Point(127, 58);
+            this.txtTenDangNhap.Location = new System.Drawing.Point(131, 58);
             this.txtTenDangNhap.Name = "txtTenDangNhap";
             this.txtTenDangNhap.Size = new System.Drawing.Size(170, 20);
             this.txtTenDangNhap.TabIndex = 1;
@@ -70,15 +71,16 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label2.Location = new System.Drawing.Point(27, 98);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.Size = new System.Drawing.Size(62, 16);
             this.label2.TabIndex = 3;
             this.label2.Text = "Mật khẩu";
             // 
             // txtMatKhau
             // 
-            this.txtMatKhau.Location = new System.Drawing.Point(127, 98);
+            this.txtMatKhau.Location = new System.Drawing.Point(131, 97);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.PasswordChar = '♥';
             this.txtMatKhau.Size = new System.Drawing.Size(170, 20);
@@ -87,7 +89,7 @@
             // btnHuy
             // 
             this.btnHuy.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnHuy.ForeColor = System.Drawing.Color.White;
             this.btnHuy.Location = new System.Drawing.Point(215, 137);
@@ -101,10 +103,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(65, 9);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(57, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(201, 24);
+            this.label3.Size = new System.Drawing.Size(225, 25);
             this.label3.TabIndex = 5;
             this.label3.Text = "Đăng nhập hệ thống";
             // 
@@ -112,7 +115,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.ClientSize = new System.Drawing.Size(334, 181);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnHuy);
@@ -121,6 +124,7 @@
             this.Controls.Add(this.txtTenDangNhap);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnDangNhap);
+            this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
