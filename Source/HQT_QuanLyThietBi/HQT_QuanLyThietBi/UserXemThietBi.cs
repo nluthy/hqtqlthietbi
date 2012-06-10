@@ -16,6 +16,8 @@ namespace HQT_QuanLyThietBi
             InitializeComponent();
         }
 
+        public Form formParent;
+
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -23,8 +25,7 @@ namespace HQT_QuanLyThietBi
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            
-            this.Owner.Visible = true;
+            formParent.Visible = true;
             this.Close();
         }
     }
