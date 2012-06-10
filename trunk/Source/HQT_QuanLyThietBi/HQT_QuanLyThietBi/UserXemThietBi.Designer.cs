@@ -37,6 +37,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvThietBi = new System.Windows.Forms.DataGridView();
+            this.SothuTu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenThietBi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Loai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -143,15 +147,50 @@
             // 
             // dgvThietBi
             // 
-            this.dgvThietBi.AllowUserToOrderColumns = true;
+            this.dgvThietBi.AllowUserToAddRows = false;
+            this.dgvThietBi.AllowUserToDeleteRows = false;
+            this.dgvThietBi.AllowUserToResizeColumns = false;
+            this.dgvThietBi.AllowUserToResizeRows = false;
             this.dgvThietBi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvThietBi.BackgroundColor = System.Drawing.Color.LightSkyBlue;
             this.dgvThietBi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvThietBi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SothuTu,
+            this.TenThietBi,
+            this.Loai,
+            this.TinhTrang});
             this.dgvThietBi.GridColor = System.Drawing.Color.LightSkyBlue;
             this.dgvThietBi.Location = new System.Drawing.Point(15, 40);
+            this.dgvThietBi.MultiSelect = false;
             this.dgvThietBi.Name = "dgvThietBi";
+            this.dgvThietBi.ReadOnly = true;
+            this.dgvThietBi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvThietBi.Size = new System.Drawing.Size(964, 361);
             this.dgvThietBi.TabIndex = 0;
+            // 
+            // SothuTu
+            // 
+            this.SothuTu.HeaderText = "Số thứ tự";
+            this.SothuTu.Name = "SothuTu";
+            this.SothuTu.ReadOnly = true;
+            // 
+            // TenThietBi
+            // 
+            this.TenThietBi.HeaderText = "Tên thiết bị";
+            this.TenThietBi.Name = "TenThietBi";
+            this.TenThietBi.ReadOnly = true;
+            // 
+            // Loai
+            // 
+            this.Loai.HeaderText = "Loại thiết bị";
+            this.Loai.Name = "Loai";
+            this.Loai.ReadOnly = true;
+            // 
+            // TinhTrang
+            // 
+            this.TinhTrang.HeaderText = "Tình trạng";
+            this.TinhTrang.Name = "TinhTrang";
+            this.TinhTrang.ReadOnly = true;
             // 
             // btnClose
             // 
@@ -225,6 +264,10 @@
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgvThietBi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SothuTu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenThietBi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Loai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TinhTrang;
 
     }
 }

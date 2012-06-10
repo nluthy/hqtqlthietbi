@@ -50,10 +50,16 @@ namespace HQT_QuanLyThietBi
             string tinhTrang = cobTinhTrang.SelectedItem.ToString();
             string maLoai;
             string maTinhTrang;
-            loaiCSVC.TryGetValue(loai,out maLoai);
+            loaiCSVC.TryGetValue(loai, out maLoai);
             tinhTrangCSVC.TryGetValue(tinhTrang, out maTinhTrang);
             List<CoSoVatChatDTO> csvc = CoSoVatChatDAO.LayDanhSachCoSoVatChat(maLoai, maTinhTrang);
-            dgvThietBi.DataSource = csvc;
+            dgvThietBi.Rows.Clear();
+            int stt = 1;
+            foreach (CoSoVatChatDTO cs in csvc)
+            {
+                dgvThietBi.Rows.Add(new string[] { stt.ToString(), cs.TenVatChat, cs.Loai, cs.TinhTrang });
+                stt++;
+            }
         }
     }
 }
