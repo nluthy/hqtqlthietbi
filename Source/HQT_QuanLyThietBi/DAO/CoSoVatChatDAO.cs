@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace DAO
 {
-    public class CoSoVatChatDAO:DataAccess
+    public class CoSoVatChatDAO : DataAccess
     {
         public static List<CoSoVatChatDTO> LayDanhSachCoSoVatChat(string maLoai, string maTinhTrang)
         {
@@ -76,7 +76,7 @@ namespace DAO
                     }
                 }
 
-               
+
             }
             catch (Exception ex)
             {
@@ -90,6 +90,68 @@ namespace DAO
                 }
             }
 
+            return kq;
+        }
+
+        public static Dictionary<string, string> LayLoaiCSVC()
+        {
+            Dictionary<string, string> kq = new Dictionary<string, string>();
+            SqlConnection conn = null;
+            try
+            {
+                conn = KetNoi();
+                SqlCommand cmd = new SqlCommand("LayLoaiVatChat", conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        kq.Add(reader.GetString(1), reader.GetString(0));
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+            finally
+            {
+                if (conn != null && conn.State == System.Data.ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+            return kq;
+        }
+
+        public static Dictionary<string, string> LayTinhTrangCSVC()
+        {
+            Dictionary<string, string> kq = new Dictionary<string, string>();
+            SqlConnection conn = null;
+            try
+            {
+                conn = KetNoi();
+                SqlCommand cmd = new SqlCommand("LayTinhTrangVatChat", conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        kq.Add(reader.GetString(1), reader.GetString(0));
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+            finally
+            {
+                if (conn != null && conn.State == System.Data.ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
             return kq;
         }
     }
