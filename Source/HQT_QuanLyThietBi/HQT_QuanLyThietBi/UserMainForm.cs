@@ -80,6 +80,38 @@ namespace HQT_QuanLyThietBi
             }
         }
 
+        private void btnMuonThietBi_Click(object sender, EventArgs e)
+        {
+            if (Program.getNguoiSuDung() != null && Program.getNguoiSuDung() != "")
+            {
+                UserMuonThietBiForm form = new UserMuonThietBiForm();
+                form.Show();
+                form.Location = Location;
+                form.frmParent = this;
+                this.Visible = false;
+            }
+            else
+            {
+                MessageBox.Show("Bạn phải đăng nhập để sử dụng chức năng này.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnCapNhatPhieuThue_Click(object sender, EventArgs e)
+        {
+            if (Program.getNguoiSuDung() != null && Program.getNguoiSuDung() != "")
+            {
+                UserMuonThietBiForm form = new UserMuonThietBiForm();
+                form.Show();
+                form.Location = Location;
+                form.frmParent = this;
+                this.Visible = false;
+            }
+            else
+            {
+                MessageBox.Show("Bạn phải đăng nhập để sử dụng chức năng này.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
 
 
     }

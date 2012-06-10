@@ -31,9 +31,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnXemThietBi = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnCapNhatPhieuThue = new System.Windows.Forms.Button();
-            this.btnMuonThietBi = new System.Windows.Forms.Button();
             this.btnDangNhap = new System.Windows.Forms.Button();
+            this.btnMuonThietBi = new System.Windows.Forms.Button();
+            this.btnCapNhatPhieuThue = new System.Windows.Forms.Button();
             this.lblGreeting = new System.Windows.Forms.Label();
             this.lblUserName = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -51,7 +51,7 @@
             this.label1.BackColor = System.Drawing.Color.LightSkyBlue;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(23, 41);
+            this.label1.Location = new System.Drawing.Point(100, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(315, 37);
             this.label1.TabIndex = 13;
@@ -88,32 +88,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chọn chức năng";
             // 
-            // btnCapNhatPhieuThue
-            // 
-            this.btnCapNhatPhieuThue.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnCapNhatPhieuThue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCapNhatPhieuThue.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnCapNhatPhieuThue.ForeColor = System.Drawing.Color.White;
-            this.btnCapNhatPhieuThue.Location = new System.Drawing.Point(31, 204);
-            this.btnCapNhatPhieuThue.Name = "btnCapNhatPhieuThue";
-            this.btnCapNhatPhieuThue.Size = new System.Drawing.Size(351, 50);
-            this.btnCapNhatPhieuThue.TabIndex = 5;
-            this.btnCapNhatPhieuThue.Text = "Cập nhật phiếu thuê";
-            this.btnCapNhatPhieuThue.UseVisualStyleBackColor = false;
-            // 
-            // btnMuonThietBi
-            // 
-            this.btnMuonThietBi.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnMuonThietBi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMuonThietBi.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnMuonThietBi.ForeColor = System.Drawing.Color.White;
-            this.btnMuonThietBi.Location = new System.Drawing.Point(31, 117);
-            this.btnMuonThietBi.Name = "btnMuonThietBi";
-            this.btnMuonThietBi.Size = new System.Drawing.Size(351, 50);
-            this.btnMuonThietBi.TabIndex = 6;
-            this.btnMuonThietBi.Text = "Mượn thiết bị";
-            this.btnMuonThietBi.UseVisualStyleBackColor = false;
-            // 
             // btnDangNhap
             // 
             this.btnDangNhap.BackColor = System.Drawing.Color.DarkOrange;
@@ -127,6 +101,34 @@
             this.btnDangNhap.Text = "Đăng xuất";
             this.btnDangNhap.UseVisualStyleBackColor = false;
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
+            // 
+            // btnMuonThietBi
+            // 
+            this.btnMuonThietBi.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnMuonThietBi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMuonThietBi.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnMuonThietBi.ForeColor = System.Drawing.Color.White;
+            this.btnMuonThietBi.Location = new System.Drawing.Point(31, 117);
+            this.btnMuonThietBi.Name = "btnMuonThietBi";
+            this.btnMuonThietBi.Size = new System.Drawing.Size(351, 50);
+            this.btnMuonThietBi.TabIndex = 6;
+            this.btnMuonThietBi.Text = "Mượn thiết bị";
+            this.btnMuonThietBi.UseVisualStyleBackColor = false;
+            this.btnMuonThietBi.Click += new System.EventHandler(this.btnMuonThietBi_Click);
+            // 
+            // btnCapNhatPhieuThue
+            // 
+            this.btnCapNhatPhieuThue.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnCapNhatPhieuThue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCapNhatPhieuThue.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnCapNhatPhieuThue.ForeColor = System.Drawing.Color.White;
+            this.btnCapNhatPhieuThue.Location = new System.Drawing.Point(31, 204);
+            this.btnCapNhatPhieuThue.Name = "btnCapNhatPhieuThue";
+            this.btnCapNhatPhieuThue.Size = new System.Drawing.Size(351, 50);
+            this.btnCapNhatPhieuThue.TabIndex = 5;
+            this.btnCapNhatPhieuThue.Text = "Cập nhật phiếu thuê";
+            this.btnCapNhatPhieuThue.UseVisualStyleBackColor = false;
+            this.btnCapNhatPhieuThue.Click += new System.EventHandler(this.btnCapNhatPhieuThue_Click);
             // 
             // lblGreeting
             // 
