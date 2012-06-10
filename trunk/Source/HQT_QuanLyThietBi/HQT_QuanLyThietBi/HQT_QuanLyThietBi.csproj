@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChonThoiGianForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChonThoiGianForm.Designer.cs">
+      <DependentUpon>ChonThoiGianForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,12 +72,21 @@
     <Compile Include="UserMainForm.Designer.cs">
       <DependentUpon>UserMainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserMuonThietBiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserMuonThietBiForm.Designer.cs">
+      <DependentUpon>UserMuonThietBiForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserXemThietBi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UserXemThietBi.Designer.cs">
       <DependentUpon>UserXemThietBi.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ChonThoiGianForm.resx">
+      <DependentUpon>ChonThoiGianForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDangNhap.resx">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -90,6 +105,9 @@
     </Compile>
     <EmbeddedResource Include="UserMainForm.resx">
       <DependentUpon>UserMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserMuonThietBiForm.resx">
+      <DependentUpon>UserMuonThietBiForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserXemThietBi.resx">
       <DependentUpon>UserXemThietBi.cs</DependentUpon>
