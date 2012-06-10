@@ -14,6 +14,7 @@ namespace HQT_QuanLyThietBi
     public partial class UserMuonThietBiForm : Form
     {
         public Form frmParent;
+        public DateTime thoiGian;
         Dictionary<string, string> loaiCSVC;
         Dictionary<string, string> dicCSVC;
 
@@ -68,10 +69,42 @@ namespace HQT_QuanLyThietBi
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            string tenCSVC = dgvThietBi.SelectedRows[0].Cells["TenThietBi"].Value.ToString();
-            string maCSVC;
-            dicCSVC.TryGetValue(tenCSVC, out maCSVC);
+            if (dgvThietBi.SelectedRows.Count > 0)
+            {
+                string tenCSVC = dgvThietBi.SelectedRows[0].Cells["TenThietBi"].Value.ToString();
+                string maCSVC;
+                dicCSVC.TryGetValue(tenCSVC, out maCSVC);
 
+                ChonThoiGianForm form = new ChonThoiGianForm();
+                form.frmParent = this;
+                if (form.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    if (dgvDanhSachMuon.RowCount < 5)
+                    {
+                        dgvDanhSachMuon.Rows.Add(new string[] { tenCSVC, thoiGian.ToShortDateString() });
+                    }
+                    else
+                    {
+                        MessageBox.Show("Bạn chỉ có thể đăng ký tối đa 5 thiết bị trong một ngày.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn thiết bị để mượn.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnXemThietBi_Click(object sender, EventArgs e)
+        {
+            if (dgvDanhSachMuon.SelectedRows.Count > 0)
+            {
+                dgvDanhSachMuon.Rows.Remove(dgvDanhSachMuon.SelectedRows[0]);
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn thiết bị muốn xóa khỏi danh sách đăng ký mượn.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

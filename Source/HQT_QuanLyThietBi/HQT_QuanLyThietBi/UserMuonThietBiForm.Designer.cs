@@ -29,12 +29,9 @@
         private void InitializeComponent()
         {
             this.btnXemThietBi = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.btnMinimize = new System.Windows.Forms.Button();
             this.dgvThietBi = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvDanhSachMuon = new System.Windows.Forms.DataGridView();
             this.btnThem = new System.Windows.Forms.Button();
@@ -45,11 +42,14 @@
             this.Loai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenThietBiMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ThoiGianMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnMinimize = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThietBi)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachMuon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnXemThietBi
@@ -64,33 +64,11 @@
             this.btnXemThietBi.TabIndex = 4;
             this.btnXemThietBi.Text = "Xóa";
             this.btnXemThietBi.UseVisualStyleBackColor = false;
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.BackgroundImage = global::HQT_QuanLyThietBi.Properties.Resources.ButtonExit;
-            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnClose.Location = new System.Drawing.Point(937, 0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 43);
-            this.btnClose.TabIndex = 16;
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.BackColor = System.Drawing.Color.Transparent;
-            this.btnMinimize.BackgroundImage = global::HQT_QuanLyThietBi.Properties.Resources.ButtonMinimize;
-            this.btnMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMinimize.Location = new System.Drawing.Point(847, 0);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(75, 43);
-            this.btnMinimize.TabIndex = 15;
-            this.btnMinimize.UseVisualStyleBackColor = false;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            this.btnXemThietBi.Click += new System.EventHandler(this.btnXemThietBi_Click);
             // 
             // dgvThietBi
             // 
+            this.dgvThietBi.AllowUserToAddRows = false;
             this.dgvThietBi.AllowUserToOrderColumns = true;
             this.dgvThietBi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvThietBi.BackgroundColor = System.Drawing.Color.LightSkyBlue;
@@ -128,20 +106,11 @@
             this.label1.BackColor = System.Drawing.Color.LightSkyBlue;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(394, 32);
+            this.label1.Location = new System.Drawing.Point(297, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(267, 37);
+            this.label1.Size = new System.Drawing.Size(430, 37);
             this.label1.TabIndex = 13;
-            this.label1.Text = "MƯỢN THIẾT BỊ";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1024, 625);
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
+            this.label1.Text = "ĐĂNG KÝ MƯỢN THIẾT BỊ";
             // 
             // groupBox1
             // 
@@ -154,10 +123,11 @@
             this.groupBox1.Size = new System.Drawing.Size(392, 502);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Danh sách mượn";
+            this.groupBox1.Text = "Danh sách đăng ký mượn";
             // 
             // dgvDanhSachMuon
             // 
+            this.dgvDanhSachMuon.AllowUserToAddRows = false;
             this.dgvDanhSachMuon.AllowUserToOrderColumns = true;
             this.dgvDanhSachMuon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDanhSachMuon.BackgroundColor = System.Drawing.Color.LightSkyBlue;
@@ -223,21 +193,58 @@
             // 
             this.TenThietBi.HeaderText = "Tên thiết bị";
             this.TenThietBi.Name = "TenThietBi";
+            this.TenThietBi.ReadOnly = true;
             // 
             // Loai
             // 
             this.Loai.HeaderText = "Loại";
             this.Loai.Name = "Loai";
+            this.Loai.ReadOnly = true;
             // 
             // TenThietBiMuon
             // 
             this.TenThietBiMuon.HeaderText = "Tên thiết bị";
             this.TenThietBiMuon.Name = "TenThietBiMuon";
+            this.TenThietBiMuon.ReadOnly = true;
             // 
             // ThoiGianMuon
             // 
             this.ThoiGianMuon.HeaderText = "Thời gian mượn";
             this.ThoiGianMuon.Name = "ThoiGianMuon";
+            this.ThoiGianMuon.ReadOnly = true;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundImage = global::HQT_QuanLyThietBi.Properties.Resources.ButtonExit;
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnClose.Location = new System.Drawing.Point(937, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 43);
+            this.btnClose.TabIndex = 16;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.BackColor = System.Drawing.Color.Transparent;
+            this.btnMinimize.BackgroundImage = global::HQT_QuanLyThietBi.Properties.Resources.ButtonMinimize;
+            this.btnMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMinimize.Location = new System.Drawing.Point(847, 0);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(75, 43);
+            this.btnMinimize.TabIndex = 15;
+            this.btnMinimize.UseVisualStyleBackColor = false;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1024, 625);
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
             // 
             // UserMuonThietBiForm
             // 
@@ -262,9 +269,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvThietBi)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachMuon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
